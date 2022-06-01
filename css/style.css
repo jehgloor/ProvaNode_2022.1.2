@@ -1,0 +1,10 @@
+
+:root{
+    --preto :  rgb(29, 29, 29);
+}
+
+
+
+body{
+    background-color: var(--preto);
+}
