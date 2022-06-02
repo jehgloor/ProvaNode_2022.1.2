@@ -2,17 +2,101 @@
 @import url(variaveis.css);
 
 
-
 body{
     background-color: var(--preto);
 }
 
+.cabecalho {
+    color: var(--branco);
+    width: 100%;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+
+    position: absolute;
+    flex-direction: row;
+    justify-content: space-between;
+    border: none;
+}
+
+.cabecalho__logo {
+    margin-left: 30%;
+    margin-bottom: 1rem;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.cabecalho__navegacao {
+    text-align: center;
+}
+
+.cabecalho__link {
+    font-size: 1.1rem;
+
+    display: inline-block;
+
+    margin-right: .7rem;
+    margin-bottom: 1.25rem;
+    margin-left: .7rem;
+   
+}
+.cabecalho__link a{
+    text-decoration: none;
+    color: var(--branco);
+}
+
+.chamada  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: var(--branco);
+    text-align: center;
+    
+    padding-bottom: 2.5rem;
+    background-image: url(../img/bg-intro.jpg);
+    background-size: cover;
+
+    padding-top: 8.25rem;
+}
+
+.chamada__titulo {
+    font-family: var(--montserrat);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 3.25rem;
+    margin-bottom: 2rem;
+}
+
+.chamada__texto {
+    font-size: 1.25rem;
+    line-height: normal;
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+}
+
+.chamada__botao {
+    width: 100%;
+    text-decoration: none;
+    color: white;
+}
+
+/* 
+ate aqui é padrao em todos  */
 .titulo__login{
     font-family: var(--letraTitulo);
     text-align: center;
     color: rgb(238, 243, 223);
     text-transform: var(--maiuscula);
 }
+
+
 .email{
     
     font-family: var(--letraInput);
@@ -37,101 +121,6 @@ body{
     font-weight: bolder;
     background-color: rgb(76, 187, 76);
 }
-
-.cabecalho {
-    color: white;
-
-
-    width: 100%;
-
-    box-sizing: border-box;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    padding-top: .75rem;
-    padding-bottom: .75rem;
-
-    border-bottom: 1px solid var(--bordaCabecalho);
-
-    position: absolute;
-
-    flex-direction: row;
-    justify-content: space-between;
-    border: none;
-}
-
-.cabecalho__logo {
-    margin-left: 30%;
-    margin-bottom: 1rem;
-    height: 100px;
-}
-
-.cabecalho__navegacao {
-    text-align: center;
-}
-
-.cabecalho__link {
-    font-size: 1.1rem;
-
-    display: inline-block;
-
-    margin-right: .7rem;
-    margin-bottom: 1.25rem;
-    margin-left: .7rem;
-   
-}
-.cabecalho__link a{
-    text-decoration: none;
-    color: white;
-}
-
-
-
-
-
-.chamada  {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    color: white;
-    text-align: center;
-    
-    padding-bottom: 2.5rem;
-    background-image: url(../img/bg-intro.jpg);
-        background-size: cover;
-
-        padding-top: 8.25rem;
-}
-
-.chamada__titulo {
-    font-family: var(--montserrat);
-   
-    font-weight: 700;
-    text-transform: uppercase;
-
-   
-
-    font-size: 3.25rem;
-    margin-bottom: 2rem;
-}
-
-.chamada__texto {
-    font-size: 1.25rem;
-    line-height: normal;
-    max-width: 600px;
-    margin: 0 auto 2.5rem;
-}
-
-.chamada__botao {
-    width: 100%;
-    text-decoration: none;
-    color: white;
-}
-
-
 
 
 
