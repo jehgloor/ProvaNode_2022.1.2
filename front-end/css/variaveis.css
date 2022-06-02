@@ -1,0 +1,10 @@
+:root{
+    --preto :  rgb(29, 29, 29);
+    --letraTitulo : 'Elsie', cursive;
+    --letraInput : 'EB Garamond', serif;
+    --maiuscula: uppercase;
+    --sombraNasInput: 10px 5px rgba(169, 169, 169, 0.545);
+    --fundoDasInput: lightgrey;
+    --montserrat: 'Montserrat', sans-serif;
+    --bordaCabecalho :  #103D4A;
+}
