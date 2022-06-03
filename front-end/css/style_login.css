@@ -90,7 +90,8 @@ body{
 /* 
 ate aqui é padrao em todos  */
 .titulo__login{
-    font-family: var(--letraTitulo);
+    margin-top: 20px;
+    font-family: var(--montserrat);
     text-align: center;
     color: rgb(238, 243, 223);
     text-transform: var(--maiuscula);
@@ -98,7 +99,7 @@ ate aqui é padrao em todos  */
 
 
 .email{
-    
+    letter-spacing: 1.5px;
     font-family: var(--letraInput);
     text-transform: var(--maiuscula);
     box-shadow: var(--sombraNasInput);
@@ -106,6 +107,7 @@ ate aqui é padrao em todos  */
     font-weight: bolder;
 }
 .senha{
+    letter-spacing: 1.5px;
     font-family: var(--letraInput);
     text-transform: var(--maiuscula);
     box-shadow: var(--sombraNasInput) ;
@@ -115,10 +117,12 @@ ate aqui é padrao em todos  */
     
 }
 .botao__enviar{
-    font-family: var(--letraInput);
+    letter-spacing: 1.5px;
+   
+    font-family: var(--letraBotao); 
     text-transform: var(--maiuscula);
     box-shadow: var(--sombraNasInput) ;
-    font-weight: bolder;
+ 
     background-color: rgb(76, 187, 76);
 }
 
