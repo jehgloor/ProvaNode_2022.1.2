@@ -2,12 +2,15 @@ class Tabelas {
 
     init(conexao){
         console.log("Banco conectado conectado com sucesso!!!");
-        criaLogin()
-        this.conexao = conexao;
+
+        this.conexao=conexao;
+
+        this.criaLogin()//aqui
+        
     }
 
     criaLogin(){
-        let sql = 'CREATE TABLE IF NOT EXIST login'+
+        let sql = 'CREATE TABLE IF NOT EXISTS login'+
             '(id_login INT AUTO_INCREMENT PRIMARY KEY,'+
             'email VARCHAR(200) NOT NULL,'+
             'senha VARCHAR(200) NOT NULL,'+
@@ -23,6 +26,8 @@ class Tabelas {
                     console.log('Tabela Login criada com sucesso!');
                 }
             })
+
+            //console.log(sql);
             
     }
 
