@@ -1,10 +1,12 @@
 const req = require("express/lib/request")
-const login = require("../model/login")
+const Login = require("../model/login")
 
 module.exports = app =>{
     app.get('/login',(req,res) =>{
-        res.send('voce esta em Login via get')
+        
+        //res.send('voce esta em Login via get')
         Login.lista(res)
+        // console.log(res);
     })
 
     app.get('/login /:id',(req,res)=>{
@@ -17,6 +19,8 @@ module.exports = app =>{
         Login.altera(id,valores,res)
     })
     app.post('/login',(req,res)=>{
+        //res.send('ola mundo')
         Login.adiciona(req.body,res)
     })
+
 }
