@@ -28,7 +28,7 @@ class Login {
         })
     }
     buscaPorId(id,res){
-        let sql = "SELECT * FROM login WHERE id=?"
+        let sql = "SELECT * FROM login WHERE id_login=?"
 
         conexao.query(sql,id,(erro,resultado)=>{
             if(erro){
@@ -39,7 +39,7 @@ class Login {
         })
     }
     altera(id,valores,res){
-        let sql = 'UPDATE login SET ? WHERE id=?'
+        let sql = 'UPDATE login SET ? WHERE id_login=?'
 
         conexao.query(sql,[valores , id],(erro,resultado)=>{
 
@@ -47,6 +47,17 @@ class Login {
                 res.status(400).json(erro);
             }else{
                 res.status(200).json(resultado)
+            }
+        })
+    }
+    deletaPorId(id,res){
+        let sql = 'DELETE * FROM login WHERE id_login=?'
+
+        conexao.query(sql,id,(erro,resultado)=>{
+            if (erro){
+                res.status(400).json(erro);
+            }else{
+                res.status(200).json(resultado);
             }
         })
     }

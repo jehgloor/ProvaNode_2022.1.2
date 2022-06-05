@@ -17,10 +17,17 @@ module.exports = app =>{
         let id = parseInt(req.params.id);
         let valores = req.body
         Login.altera(id,valores,res)
+        // aqui pode ficar aqui ?
+        //Login.deletaPorId(id,res);
     })
-    app.post('/login',(req,res)=>{
+
+
+    app.post('/loginCriado',(req,res)=>{
+        res.send('email'+ req.body.email+'senha'+req.body.senha)
         //res.send('ola mundo')
-        Login.adiciona(req.body,res)
+        //Login.adiciona(req.body,res)
+
+        return res.redirect('/login')
     })
 
 }
