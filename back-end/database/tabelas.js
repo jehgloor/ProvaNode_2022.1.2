@@ -1,36 +1,31 @@
 class Tabelas {
 
     init(conexao){
-        console.log("Banco conectado conectado com sucesso!!!");
-
-        this.conexao=conexao;
-
-        this.criaLogin()//aqui
+        console.log("Banco conectado conectado com sucesso!!!")
+        this.conexao=conexao
+        this.criaCadastro()//aqui
         
     }
 
-    criaLogin(){
-        let sql = 'CREATE TABLE IF NOT EXISTS login'+
-            '(id_login INT AUTO_INCREMENT PRIMARY KEY,'+
+    criaCadastro(){
+        let sql = 'CREATE TABLE IF NOT EXISTS cadastro'+
+            '(id_prestadorServico INT AUTO_INCREMENT PRIMARY KEY,'+
+            'nome VARCHAR (200) NOT NULL,'+
+            'cpf INT NOT NULL,'+
             'email VARCHAR(200) NOT NULL,'+
-            'senha VARCHAR(200) NOT NULL,'+
-            'id_cliente_fk INT NOT NULL,'+
-            'id_prestadorServico_fk INT NOT NULL,'+
-            'foreign key (id_cliente_fk) references cliente(id_cliente),'+
-            'foreign key (id_prestadorServico_fk) references prestadorServico(id_prestadorServico));'
+            'senha VARCHAR(200) NOT NULL)'
 
-            this.conexao.query(sql, erro =>{
+            this.conexao.query(sql, erro => {
                 if(erro){
                     console.log(erro);
                 }else{
-                    console.log('Tabela Login criada com sucesso!');
+                    console.log('Tabela Cadastro criada com sucesso!')
                 }
             })
 
-            //console.log(sql);
-            
+            //console.log(sql);           
     }
 
 }
 
-module.exports = new Tabelas;
+module.exports = new Tabelas

@@ -1,8 +1,8 @@
 const req = require("express/lib/request")
-const Login = require("../model/login")
+const Login = require("../model/cadastro")
 
 module.exports = app =>{
-    app.get('/login',(req,res) =>{
+    app.get('/cadastro',(req,res) =>{
         
         //res.send('voce esta em Login via get')
         Login.lista(res)

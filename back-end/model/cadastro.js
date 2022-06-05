@@ -1,10 +1,10 @@
 const conexao = require('../database/connection');
 
-class Login {
-    adiciona(login, res){
-        let sql = 'INSERT INTO login SET ?'
+class Cadastro {
+    adiciona(cadastro, res){
+        let sql = 'INSERT INTO cadastro SET ?'
 
-        conexao.query(sql,login,(erro,resultado)=>{
+        conexao.query(sql,cadastro,(erro,resultado)=>{
             if(erro){
                 res.status(400).json(erro)
                 
@@ -16,7 +16,7 @@ class Login {
     }
 
     lista(res){
-        const sql = 'SELECT * FROM login'
+        const sql = 'SELECT * FROM cadastro'
 
         conexao.query(sql,(erro,resultado)=>{
             if(erro){
@@ -28,7 +28,7 @@ class Login {
         })
     }
     buscaPorId(id,res){
-        let sql = "SELECT * FROM login WHERE id=?"
+        let sql = "SELECT * FROM cadastro WHERE id=?"
 
         conexao.query(sql,id,(erro,resultado)=>{
             if(erro){
@@ -39,7 +39,7 @@ class Login {
         })
     }
     altera(id,valores,res){
-        let sql = 'UPDATE login SET ? WHERE id=?'
+        let sql = 'UPDATE cadastro SET ? WHERE id=?'
 
         conexao.query(sql,[valores , id],(erro,resultado)=>{
 
@@ -52,4 +52,4 @@ class Login {
     }
 }
 
-module.exports = new Login
+module.exports = new Cadastro

@@ -89,7 +89,7 @@ body{
 
 /* 
 ate aqui é padrao em todos  */
-.titulo__login{
+.titulo__cadastro{
     margin-top: 20px;
     font-family: var(--montserrat);
     text-align: center;
@@ -97,6 +97,23 @@ ate aqui é padrao em todos  */
     text-transform: var(--maiuscula);
 }
 
+.nome{
+    letter-spacing: 1.5px;
+    font-family: var(--letraInput);
+    text-transform: var(--maiuscula);
+    box-shadow: var(--sombraNasInput);
+    background-color: var(--fundoDasInput);
+    font-weight: bolder;
+}
+
+.cpf{
+    letter-spacing: 1.5px;
+    font-family: var(--letraInput);
+    text-transform: var(--maiuscula);
+    box-shadow: var(--sombraNasInput);
+    background-color: var(--fundoDasInput);
+    font-weight: bolder;
+}
 
 .email{
     letter-spacing: 1.5px;
@@ -125,34 +142,3 @@ ate aqui é padrao em todos  */
  
     background-color: rgb(76, 187, 76);
 }
-
-.cadastro__cliente{
-    margin-top: 45px;
-    border: 2px solid white;
-    margin-right: 5px;
-    text-align: center;
-}
-
-.cadastro__prestador{
-    margin-left: 5px;
-    margin-top: 45px;
-    border: 2px solid white;
-    padding-bottom: 30px;
-    text-align: center;
-}
-
-
-.texto__cadastro--cliente{
-    font-family: var(--montserrat);
-    margin-top: 30px;
-    color: var(--branco);
-}
-
-
-
-.texto__cadastro--prestador{
-    margin-top: 30px;
-    color: var(--branco);
-    font-family: var(--montserrat);
-}
-
