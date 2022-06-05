@@ -1,4 +1,5 @@
 const req = require("express/lib/request")
+const cadastro = require("../model/cadastro")
 const Login = require("../model/cadastro")
 
 module.exports = app =>{
@@ -9,18 +10,18 @@ module.exports = app =>{
         // console.log(res);
     })
 
-    app.get('/login /:id',(req,res)=>{
+    app.get('/cadastro /:id',(req,res)=>{
         let id = parseInt(req.params.id)
         Login.buscaPorId(id,res)
     })
-    app.patch('/login/:id',(req,res)=>{
+    app.patch('/cadastro/:id',(req,res)=>{
         let id = parseInt(req.params.id);
         let valores = req.body
         Login.altera(id,valores,res)
     })
-    app.post('/login',(req,res)=>{
+    app.post('/cadastro',(req,res)=>{
         //res.send('ola mundo')
-        Login.adiciona(req.body,res)
+        cadastro.adiciona(req.body,res)
     })
 
 }
