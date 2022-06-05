@@ -20,22 +20,13 @@ module.exports = app =>{
         let valores = req.body
         cliente.altera(id, valores,res)
     })
+    // app.patch('/cliente/ :id',(req,res)=>{ //nao sei ainda como fazer essa funçao
+    //     let id = parseInt(req.params.id)
+    //     let valores = req.body
+    //     cliente.deletaPorId(id,valores,res)
+    // })
 
     
 
 }
 
-//     app.post('/carteira', (req,res) => {
-      
-//         if(req.body.saldo<=0){
-//             res.send('saldo insuficiente')
-//             console.log("saldo insuficiente");
-//         }else{
-//             res.send('Você esta em CARTEIRA via POST');
-//             console.log(req.body);
-//             Carteira.adiciona(req.body);
-//         }
-        
-//     })
-
-// }

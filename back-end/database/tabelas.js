@@ -12,6 +12,9 @@ class Tabelas{
                     'cep varchar(10),'+
                     'rua varchar(200),'+
                     'numero INT,'+
+                    'bairro varchar(200),'+
+                    'cidade varchar(200),'+
+                    'uf varchar(200),'+
                     'email varchar(200),'+
                     'senha varchar(16) )';
             

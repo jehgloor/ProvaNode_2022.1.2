@@ -26,7 +26,7 @@ class Cliente{
     })
     }
     buscaPorId(id,res){
-        let sql = 'SELECT * FROM id=?' //fiquei na duvida se chamo id ou id_cliente!!!
+        let sql = 'SELECT * FROM cliente WHERE id_cliente = ?' //fiquei na duvida se chamo id ou id_cliente!!!
         conexao.query(sql,id,(erro, resultado)=>{
             if(erro){
                 res.status(400).json(erro)
@@ -36,12 +36,22 @@ class Cliente{
         })
     }
     altera(id,valores,res){
-        let sql = 'UPDATE cliente SET? WHERE id=?'
+        let sql = 'UPDATE cliente SET? WHERE id_cliente = ?'
         conexao.query(sql,[valores, id],(erro,resultado)=>{
             if(erro){
                 res.send(400).json(erro)
             }else{
                 res.send(200).json(resultado)
+            }
+        })
+    }
+    deletaPorId(id,res){
+        let sql = 'DELETE * FROM cliente WHERE id_cliente = ?'
+        conexao.query(sql,id,(erro, resultado)=>{
+            if(erro){
+                res.status(400).json(erro)
+            }else{
+                res.status(200).json(resultado)
             }
         })
     }

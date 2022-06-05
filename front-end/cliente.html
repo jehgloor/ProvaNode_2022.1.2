@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,10 +13,158 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,500&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="../front-end/css/style_login.css">
+    <link rel="stylesheet" href="../front-end/css/style_cliente.css">
     <title>CLIENTE</title>
 </head>
 <body>
+    <header class="cabecalho container">
+        <img src="../front-end/img/logoServico.jpg" alt="Logo da Apeperia" class="cabecalho__logo">
+        <nav class="cabecalho__navegacao">
+            <ul>
+                <li class="cabecalho__link"><a href="#">Sobre</a></li>
+                <li class="cabecalho__link"><a href="#">Valores de Serviços</a></li>
+                <li class="cabecalho__link"><a href="login.html">Login</a></li>
+                <li class="cabecalho__link"><a href="cliente.html">Cadastro | Cliente</a></li>
+                <li class="cabecalho__link"><a href="#">Cadastro | Afiliado</a></li>
+                <li class="cabecalho__link"><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="chamada container">
+            <h1 class="chamada__titulo">Serviço Express</h1>
+            <p class="chamada__texto">Serviços Express tem um jeito inovador de mostrar aos 
+                nossos clientes os valores de nossos serviços</p>
+            <a  href="#" class="chamada__botao botao">Conheça os valores</a>
+        </section>
+        <script>    
+             
+            function limpa_formulário_cep() {
+           //Limpa valores do formulário de cep.
+           document.getElementById('rua').value=("");
+           document.getElementById('bairro').value=("");
+           document.getElementById('cidade').value=("");
+           document.getElementById('uf').value=("");
+           
+   }
+
+   function meu_callback(conteudo) {
+       if (!("erro" in conteudo)) {
+           //Atualiza os campos com os valores.
+           document.getElementById('rua').value=(conteudo.logradouro);
+           document.getElementById('bairro').value=(conteudo.bairro);
+           document.getElementById('cidade').value=(conteudo.localidade);
+           document.getElementById('uf').value=(conteudo.uf);
+       }  
+       else {
+           //CEP não Encontrado.
+           limpa_formulário_cep();
+           alert("CEP não encontrado.");
+       }
+   }
+       
+   function pesquisacep(valor) {
+
+       //Nova variável "cep" somente com dígitos.
+       var cep = valor.replace(/\D/g, '');
+
+       //Verifica se campo cep possui valor informado.
+       if (cep != "") {
+
+           //Expressão regular para validar o CEP.
+           var validacep = /^[0-9]{8}$/;
+
+           //Valida o formato do CEP.
+           if(validacep.test(cep)) {
+
+               //Preenche os campos com "..." enquanto consulta webservice.
+               document.getElementById('rua').value="...";
+               document.getElementById('bairro').value="...";
+               document.getElementById('cidade').value="...";
+               document.getElementById('uf').value="...";
+               
+
+               //Cria um elemento javascript.
+               var script = document.createElement('script');
+
+               //Sincroniza com o callback.
+               script.src = 'https://viacep.com.br/ws/'+ cep + '/json/?callback=meu_callback';
+
+               //Insere script no documento e carrega o conteúdo.
+               document.body.appendChild(script);
+
+           } 
+           else {
+               //cep é inválido.
+               limpa_formulário_cep();
+               alert("Formato de CEP inválido.");
+           }
+       } 
+       else {
+           //cep sem valor, limpa formulário.
+           limpa_formulário_cep();
+       }
+   };  
+   
+              
+           </script>
+   </head>
+       <body>
+          
+               <section class="row">
+                   <div class="col-md-3">
+
+                   </div>
+               
+                   <section class="col-md-6">
+                       <h1 class="titulo_cliente">Cadastro de Cliente</h1>
+                       <form action="/cliente" method="post">
+                                <div class="mb-3">
+                                    <input type="text" class=" form-control botao2" placeholder="NOME" id="nome" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="number" class="form-control botao2" placeholder="CPF" id="cpf" required>
+                                </div>
+                               <div class="mb-3">                    
+                                   <input class="form-control botao2" type="text" placeholder="CEP" id="cep" value=""
+                                       onblur="pesquisacep(this.value);" >
+                               </div>
+
+                               <div class="mb-3">
+                                   <input type="text" class="form-control botao2" size="60" placeholder="RUA" id="rua" required>
+                               </div>
+                               <div class="mb-3">
+                                   <input type="number" class="form-control botao2" placeholder="NUMERO" id="numero">
+                               </div>
+
+                               <div class="mb-3">
+                                   <input type="text" class="form-control botao2" size="30" placeholder="CIDADE" id="cidade" required>
+                               </div>
+
+                               <div class="mb-3">
+                                   <input type="text" class="form-control botao2" size="60" placeholder="BAIRRO" id="bairro" required>
+                               </div>        
+
+                               <div class="mb-3">
+                                   <input type="text" class="form-control botao2"size="2" placeholder="UF" id="uf" required>
+                               </div>
+
+                               <div class="mb-3">
+                                   <input type="email" class="form-control botao2" placeholder="E-MAIL" id="email" required>
+                               </div>
+                               <div class="mb-3">
+                                   <input type="password" class="form-control botao2" placeholder="SENHA" id="senha" required>
+                               </div>
+
+                               <div class="mb-3">          
+                                   <button type="submit" class="botao__enviar form-control">ENVIAR</button>
+                               </div>
+                       </form>
+                   </section>
+                               <div class="col-md-3">
+
+                               </div>
+               </section>
     
 </body>
 </html>
