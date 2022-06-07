@@ -1,4 +1,4 @@
-
+// npm install cors
 const customExpress = require('./configuracao/customExpress');
 
 const app = customExpress();
