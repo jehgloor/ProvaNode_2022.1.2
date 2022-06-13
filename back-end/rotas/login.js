@@ -24,29 +24,14 @@ module.exports = app =>{
 
     app.post('/login',(req,res)=>{
 
-         //res.send('ola mundo')
+        console.log(req.body);
         Login.adiciona(req.body,res)
         
-       // app.use(express. urlencoded())
-        //res.send('email'+ req.body.email+'senha'+req.body.senha)
        
-        //return res.redirect('/login')
-        // var conteudo = JSON.stringify(req.body);
-        // var fs = require('fs');
-        // fs.writeFile('nome-do-ficheiro.txt', conteudo, 'utf8', function (err) {
-        //   if (err) throw err;
-        //   // correr código aqui depois do ficheiro estar gravado
+        
          });
 
-    //     let post = 
-    //             {email: req.body.email, 
-    //             senha: req.body.senha
-    //             }
-    //     let sql = 'INSERT INTO login SET ?';
-    //     let query = db.query(sql, post, (err, result) => {
-    //             if(err) throw err;
-    //             res.send("Post added");
-    // })
+
 
 
 }
