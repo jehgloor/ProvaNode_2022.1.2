@@ -20,11 +20,11 @@ module.exports = app =>{
         let valores = req.body
         cliente.altera(id, valores,res)
     })
-    // app.patch('/cliente/ :id',(req,res)=>{ //nao sei ainda como fazer essa funçao
-    //     let id = parseInt(req.params.id)
-    //     let valores = req.body
-    //     cliente.deletaPorId(id,valores,res)
-    // })
+    app.delete('/cliente/ :id',(req,res)=>{ //nao sei ainda como fazer essa funçao
+        let id = parseInt(req.params.id)
+        let valores = req.body
+        cliente.deletaPorId(id,valores,res)
+    })
 
     
 
