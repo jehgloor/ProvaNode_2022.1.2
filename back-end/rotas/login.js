@@ -25,7 +25,12 @@ module.exports = app =>{
     app.post('/login',(req,res)=>{
 
         console.log(req.body);
-        Login.adiciona(req.body,res)
+        //Login.adiciona(req.body,res)
+        email = req.body.email
+        senha = req.body.senha
+
+        console.log("aqui no console",req.body);
+        Login.buscaPorEmail(email,senha,res)
         
        
         

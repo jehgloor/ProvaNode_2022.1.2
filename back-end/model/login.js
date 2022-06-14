@@ -61,6 +61,18 @@ class Login {
             }
         })
     }
+
+    buscaPorEmail(email,senha,res){
+        let sql = "SELECT * FROM cliente WHERE email=? AND senha=?"
+
+        conexao.query(sql,[email , senha],(erro,resultado)=>{
+            if (erro){
+                res.status(400).json(erro);
+            }else{
+                res.status(200).json(resultado);
+            }
+        })
+    }
 }
 
-module.exports = new Login
+module.exports = new Login;

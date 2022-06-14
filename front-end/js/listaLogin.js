@@ -27,6 +27,8 @@ function criaLinha(dados){
 
 }
 function main(){
+
+    
     let dados = fazGet("http://127.0.0.1:5000/login")
 
     //pegar o componente inteiro da tabela que esta no html

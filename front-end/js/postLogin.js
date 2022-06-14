@@ -35,8 +35,8 @@ function consultaLogin(event){
     const url = 'http://127.0.0.1:5000/login'
 
     //acessar os valores do campo do html
-    let email = document.getElementById('email').value;
-    let senha = document.getElementById('senha').value;
+    let email = document.getElementById('email_login').value;
+    let senha = document.getElementById('senha_login').value;
 
 
     //json
@@ -56,4 +56,4 @@ function consultaLogin(event){
 window.addEventListener("DOMContentLoaded", function(event) {
     console.log("DOM completamente carregado e analisado");
     document.getElementById('enviarLogin').addEventListener('submit',consultaLogin);
-  });
+});
