@@ -8,7 +8,7 @@ class Tabelas{
                 let sql='create table IF NOT EXISTS cliente'+
                     '(id_cliente INT not null auto_increment primary key,'+
                     'nome varchar (100) not null,'+
-                    'cpf INT not null,'+
+                    'cpf varchar(13) not null,'+
                     'cep varchar(10),'+
                     'rua varchar(200),'+
                     'numero INT,'+
