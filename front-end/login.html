@@ -26,11 +26,11 @@
         <img src="../front-end/img/logoServico.jpg" alt="Logo da Apeperia" class="cabecalho__logo">
         <nav class="cabecalho__navegacao">
             <ul>
-                <li class="cabecalho__link"><a href="#" class="cabecalho__link__a">Sobre</a></li>
-                <li class="cabecalho__link"><a href="#">Planos</a></li>
-                <li class="cabecalho__link"><a href="#">Blog</a></li>
-                <li class="cabecalho__link"><a href="#">Destaques</a></li>
-                <li class="cabecalho__link"><a href="#">Institucional</a></li>
+                <li class="cabecalho__link"><a href="#">Sobre</a></li>
+                <li class="cabecalho__link"><a href="#">Valores de Serviços</a></li>
+                <li class="cabecalho__link"><a href="login.html">Login</a></li>
+                <li class="cabecalho__link"><a href="cliente.html">Cadastro | Cliente</a></li>
+                <li class="cabecalho__link"><a href="#">Cadastro | Afiliado</a></li>
                 <li class="cabecalho__link"><a href="#">Contato</a></li>
             </ul>
         </nav>
@@ -49,12 +49,14 @@
     
             </div>
             <div class="col-md-6">
-                <form id="enviarLogin">
+                <form action=""  method="get" id="enviarLogin">
                     <h1 class="titulo__login">Faça seu Login</h1><br>
                     <input id="email_login" name="email" class=" form-control email" type="email" placeholder="e-mail" required><br>
                     <input id="senha_login" class=" form-control senha" type="password" placeholder="senha" required><br>
                     <button type="submit" class="botao__enviar form-control">Enviar</button>
                 </form>
+
+                <p id="resultado"></p>
             </div>
             <div class="col-md-3">
                 

@@ -1,56 +1,50 @@
 
-function fazPost(url,body){
+function fazGet(url){
+    let request = new XMLHttpRequest
+    request.open("GET",url,false)
+    request.send()
 
-    // XMLHttpRequest : fornece funcionalidade ao cliente para transferir 
-    // dados entre um cliente e um servidor. Ele fornece uma maneira fácil 
-    // de recuperar dados de um URL sem ter que fazer uma atualização de 
-    // página inteira. Isso permite que uma página da Web atualize apenas 
-    // uma parte do conteúdo sem interromper o que o usuário esteja fazendo.
-    let request = new XMLHttpRequest();
-
-    //configurando a request:
-    request.open("POST" , url, true);
-    request.setRequestHeader("Content-type","application/json")
-    //pega uma string e garante q ela ta em formato json;
-    request.send(JSON.stringify(body));
-
-   
-    request.onload = function (){
-         //responseText retorna o texto recebido de um servidor após o envio de uma 
-         //solicitação.
-         //valor : Uma string que contém os dados textuais recebidos usando
-        // XMLHttpRequestou nullse a solicitação falhou ou ""se a solicitação 
-        //ainda não foi enviada por chamada send().
-        console.log(this.responseText);
+    request.onload = function() {
+        console.log(this.responseText)
     }
-    return request.responseText;
+
+    return request.responseText
+
 }
 
-
-
-// fazendo um post :
 function consultaLogin(event){
     event.preventDefault();
-    //declara minha url
-    const url = 'http://127.0.0.1:5000/login'
-
+ 
     //acessar os valores do campo do html
     let email = document.getElementById('email_login').value;
     let senha = document.getElementById('senha_login').value;
 
+    console.log("entrando na função consulta login");
+    const url = 'http://127.0.0.1:5000/login/'+email
 
-    //json
-    body = {
-        "email":email,
-        "senha":senha,
-        //coloquei para testar , mas depois tem q adaptar para nossa regra de negocio
-       "id_cliente_fk" : "1",
-       "id_prestadorServico_fk":"1"
+    let dados =  fazGet(url);
+    let usuarios = JSON.parse(dados);
+    let senhaBanco = "";
+
+    let cont = 0;
+
+    usuarios.forEach(element => {
+        console.log(element);
+        senhaBanco = element.senha;
+        cont ++;
+    });
+
+    if(cont == 0){
+        alert("Usuário não encontrado")
+    }else{
+        if(senha == senhaBanco){
+            window.location.href = '../front-end/cliente.html'
+            alert("Usuário logado com sucesso")
+        }else{
+            alert("Senha incorreta!")
+        }
     }
-
-
-    fazPost(url,body)
-    return false;
+    
 }
 
 window.addEventListener("DOMContentLoaded", function(event) {

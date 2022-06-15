@@ -22,19 +22,18 @@ module.exports = app =>{
     })
 
 
-    app.post('/login',(req,res)=>{
+    app.get('/login/:email',(req,res)=>{
+        let email = req.params.email;
+   
+        console.log(`email ${email}`);
+        Login.buscaPorEmail(email,res);
 
-        console.log(req.body);
-        //Login.adiciona(req.body,res)
-        email = req.body.email
-        senha = req.body.senha
 
-        console.log("aqui no console",req.body);
-        Login.buscaPorEmail(email,senha,res)
-        
+
+    })
+
+   
        
-        
-         });
 
 
 

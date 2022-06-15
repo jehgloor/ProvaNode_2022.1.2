@@ -1,10 +1,21 @@
 function fazPost(url,body){
 
+    // XMLHttpRequest : fornece funcionalidade ao cliente para transferir 
+    // dados entre um cliente e um servidor. Ele fornece uma maneira fácil 
+    // de recuperar dados de um URL sem ter que fazer uma atualização de 
+    // página inteira. Isso permite que uma página da Web atualize apenas 
+    // uma parte do conteúdo sem interromper o que o usuário esteja fazendo.
     let request = new XMLHttpRequest()
     request.open("POST",url,true)
     request.setRequestHeader("content-type", "application/json")
+    //pega uma string e garante q ela ta em formato json;
     request.send(JSON.stringify(body))
     request.onload = function(){
+        //responseText retorna o texto recebido de um servidor após o envio de uma 
+         //solicitação.
+         //valor : Uma string que contém os dados textuais recebidos usando
+        // XMLHttpRequest ou null se a solicitação falhou ou "" se a solicitação 
+        //ainda não foi enviada por chamada send().
         console.log(this.responseText)
     }
     return request.responseText

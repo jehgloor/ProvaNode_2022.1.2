@@ -62,10 +62,10 @@ class Login {
         })
     }
 
-    buscaPorEmail(email,senha,res){
-        let sql = "SELECT * FROM cliente WHERE email=? AND senha=?"
+    buscaPorEmail(email,res){
+        let sql = "SELECT email,senha FROM cliente WHERE email=?"
 
-        conexao.query(sql,[email , senha],(erro,resultado)=>{
+        conexao.query(sql,email ,(erro,resultado)=>{
             if (erro){
                 res.status(400).json(erro);
             }else{
@@ -73,6 +73,8 @@ class Login {
             }
         })
     }
+
+
 }
 
 module.exports = new Login;
