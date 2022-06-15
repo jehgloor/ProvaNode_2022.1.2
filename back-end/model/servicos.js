@@ -31,10 +31,10 @@ class Servicos{
     })
     }
 
-    buscaPorCliente(id_cliente, res){
+    buscaPorPrestador(id_prestador, res){
         let sql = 'SELECT * FROM servico WHERE id_prestadorDeServico=?'
 
-        conexao.query(sql,id_cliente,(erro,resultado)=>{
+        conexao.query(sql,id_prestador,(erro,resultado)=>{
             if(erro){
                 res.status(400).json(erro)
             }else{
