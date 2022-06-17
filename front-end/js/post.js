@@ -1,4 +1,4 @@
-function fazPost(url, body){
+function fazPost(url,body){
     let request = new XMLHttpRequest
     request.open("POST", url, true)
     request.setRequestHeader("Content-type", "application/json")
@@ -11,9 +11,9 @@ function fazPost(url, body){
     return request.responseText
 }
 
-function ItensDeServico(){
+function itensdeservico(){
  //   event.preventDefault()
-    const url = 'http://localhost:5000/ItensDeServico'
+    const url = 'http://localhost:5000/itensdeservico'
     let nome = document.getElementById("nome").value
     let id = parseInt (document.getElementById("id").value)
     let valor = document.getElementById("valor").value
