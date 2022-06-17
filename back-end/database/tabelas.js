@@ -3,11 +3,11 @@ class Tabelas {
     init(conexao){
         console.log("Banco conectado conectado com sucesso!!!")
         this.conexao=conexao
-        this.criaItensDeServico()//aqui
+        this.criaItensdeservico()//aqui
 
     }
 
-    criaPrestadorDeServico(){
+    criaItensdeservico(){
         let sql = 'CREATE TABLE IF NOT EXISTS itensDeServico'+
             '(id_itensServico INT AUTO_INCREMENT PRIMARY KEY,'+
             'nome_Servico VARCHAR (200) NOT NULL,'+
