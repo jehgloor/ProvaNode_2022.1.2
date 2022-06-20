@@ -16,7 +16,8 @@ function fazPOST(url, body){
 
 
 
-function registraitemServico(){
+function registraitemServico(event){
+    event.preventDefault();
     let url = "http://127.0.0.1:5000/itensdeservico"
     let nome = document.getElementById('nome').value
     let valor = document.getElementById('valor').value
@@ -32,3 +33,9 @@ function registraitemServico(){
 
     fazPOST(url,body)
 }
+
+
+window.addEventListener("DOMContentLoaded", function(event){
+    console.log("DOM completamente carregado")
+    document.getElementById('registra').addEventListener('submit',registraitemServico)
+})

@@ -1,10 +1,10 @@
 const conexao = require('../database/connection.js')
 
 class Servicos{
-    adiciona(total,id_itens,id_prestador,res){
-        let sql = 'INSERT INTO servico (total, id_itensdeservico, id_prestadordeservico) SET ?'
+    adiciona(servico,res){
+        let sql = 'INSERT INTO servico SET ?'
 
-        conexao.query(sql, [total,id_itens,id_prestador], (erro,resultado) => {
+        conexao.query(sql, servico, (erro,resultado) => {
             if(erro){
                 res.status(400).json(erro)
                 
