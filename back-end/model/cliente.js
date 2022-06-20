@@ -4,13 +4,15 @@ const conexao = require('../database/connection')
 const cliente = require('../rotas/cliente')
 
 class Cliente{
-    adiciona(cliente){
+    adiciona(cliente,res){
         let sql = 'INSERT INTO cliente SET ?'
         conexao.query(sql, cliente,(erro,resultado) =>{
             if (erro){
-                console.log(erro)
+             //   console.log(erro)
+                res.status(400).json(erro)
             }else{
-                console.log(resultado)
+                res.status(200).json(resultado);
+              //  console.log(resultado)
             }
         })
     }
