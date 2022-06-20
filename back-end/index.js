@@ -1,3 +1,9 @@
+// npm install express   
+// npm --save-dev install nodemon
+// npm install consign
+// npm install body-parser
+// npm install mysql
+// Comando para iniciar a aplicação: npm start
 
 const customExpress = require('./configuracao/customExpress');
 
