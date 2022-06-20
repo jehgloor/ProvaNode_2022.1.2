@@ -18,32 +18,36 @@ function consultaLogin(event){
     //acessar os valores do campo do html
     let email = document.getElementById('email_login').value;
     let senha = document.getElementById('senha_login').value;
+    let tipo = document.getElementById('tipo').value;
 
     console.log("entrando na função consulta login");
-    const url = 'http://127.0.0.1:5000/login/'+email
+    const url = 'http://127.0.0.1:5000/login/'+tipo+'/'+email
 
     let dados =  fazGet(url);
     let usuarios = JSON.parse(dados);
     let senhaBanco = "";
 
-    let cont = 0;
-
-    usuarios.forEach(element => {
-        console.log(element);
-        senhaBanco = element.senha;
-        cont ++;
-    });
-
-    if(cont == 0){
-        alert("Usuário não encontrado")
-    }else{
-        if(senha == senhaBanco){
-            window.location.href = '../front-end/cliente.html'
-            alert("Usuário logado com sucesso")
+    
+   
+        let cont = 0;
+        usuarios.forEach(element => {
+            console.log(element);
+            senhaBanco = element.senha;
+            cont ++;
+        });
+    
+        if(cont == 0){
+            alert("Usuário não encontrado")
         }else{
-            alert("Senha incorreta!")
+            if(senha == senhaBanco){
+                window.location.href = '../front-end/cliente.html'
+                alert("Usuário logado com sucesso")
+            }else{
+                alert("Senha incorreta!")
+            }
         }
-    }
+    
+   
     
 }
 

@@ -94,7 +94,7 @@ ate aqui é padrao em todos  */
 }
 
 
-.email{
+.input__forms--login{
     letter-spacing: 1.5px;
     font-family: var(--letraInput);
     /* text-transform: var(--maiuscula); */
@@ -102,23 +102,12 @@ ate aqui é padrao em todos  */
     background-color: var(--fundoDasInput);
     font-weight: bolder;
 }
-.senha{
-    letter-spacing: 1.5px;
-    font-family: var(--letraInput);
-    /* text-transform: var(--maiuscula); */
-    box-shadow: var(--sombraNasInput) ;
-    font-weight: bolder;
-    background-color: var(--fundoDasInput);
-   
-    
-}
+
 .botao__enviar{
     letter-spacing: 1.5px;
-   
     font-family: var(--letraBotao); 
     text-transform: var(--maiuscula);
     box-shadow: var(--sombraNasInput) ;
- 
     background-color: rgb(76, 187, 76);
 }
 

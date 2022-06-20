@@ -43,7 +43,7 @@
                 nossos clientes os valores de nossos serviços</p>
             <a  href="#" class="chamada__botao botao">Conheça os valores</a>
         </section>
-        <!-- até aqui é padrao  -->
+
         <div class="row ">
             <div class="col-md-3">
     
@@ -51,8 +51,13 @@
             <div class="col-md-6">
                 <form action=""  method="get" id="enviarLogin">
                     <h1 class="titulo__login">Faça seu Login</h1><br>
-                    <input id="email_login" name="email" class=" form-control email" type="email" placeholder="e-mail" required><br>
-                    <input id="senha_login" class=" form-control senha" type="password" placeholder="senha" required><br>
+                    <select class=" form-control input__forms--login" name="tipo" id="tipo">
+                        <option value="cliente" id="cliente" >Cliente</option>
+                        <option value="prestador">Prestador de Serviço</option>
+                    </select><br>
+                    <input id="email_login" name="email" class=" form-control input__forms--login" type="email" placeholder="e-mail" required><br>
+                    <input id="senha_login" class=" form-control input__forms--login" type="password" placeholder="senha" required><br>
+
                     <button type="submit" class="botao__enviar form-control">Enviar</button>
                 </form>
 
