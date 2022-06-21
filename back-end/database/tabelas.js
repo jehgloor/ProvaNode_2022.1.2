@@ -6,6 +6,10 @@ class Tabelas {
         this.conexao=conexao;
 
         this.criaCliente();
+
+        this.criaPrestadorDeServico()
+
+        this.criaServico()
         //this.criaLogin()
         
         
@@ -59,6 +63,44 @@ class Tabelas {
                 }
 
         })
+}
+
+criaServico(){
+    let sql = 'create table IF NOT EXISTS servico('+
+        'id_servico INT AUTO_INCREMENT NOT NULL PRIMARY KEY,'+
+        'total DOUBLE NOT NULL,'+
+        'id_itensDeServico INT,'+
+        'id_prestadorDeServico INT,'+
+        'FOREIGN KEY (id_itensDeServico) REFERENCES itensDeServico(id_itensdeservico),'+
+        'FOREIGN KEY (id_prestadorDeServico) REFERENCES prestadorDeServico(id_prestadordeServico))'
+       
+        this.conexao.query(sql, erro => {
+            if(erro){
+                console.log(erro)
+            }else{
+                console.log('Tabela SERVICO criada com sucesso!')
+            }
+
+        })
+       
+}
+criaPrestadorDeServico(){
+    let sql = 'CREATE TABLE IF NOT EXISTS prestadorDeServico'+
+        '(id_prestadordeServico INT AUTO_INCREMENT PRIMARY KEY NOT NULL,'+
+        'nome VARCHAR (200) NOT NULL,'+
+        'cpf INT NOT NULL,'+
+        'email VARCHAR(200) NOT NULL,'+
+        'senha VARCHAR(200) NOT NULL)'
+
+        this.conexao.query(sql, erro => {
+            if(erro){
+                console.log(erro);
+            }else{
+                console.log('Tabela PRESTADOR_DE_SERVICO criado com sucesso!')
+            }
+        })
+
+        //console.log(sql);           
 }
 
 }
