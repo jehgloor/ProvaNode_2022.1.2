@@ -3,7 +3,7 @@
 
 
 body{
-    background-color: var(--preto);
+    background-color: rgb(198, 197, 197);
 }
 
 .cabecalho {
@@ -89,7 +89,7 @@ ate aqui é padrao em todos  */
     margin-top: 20px;
     font-family: var(--montserrat);
     text-align: center;
-    color: rgb(238, 243, 223);
+    color: var(--preto);
     text-transform: var(--maiuscula);
 }
 
@@ -99,7 +99,7 @@ ate aqui é padrao em todos  */
     font-family: var(--letraInput);
     /* text-transform: var(--maiuscula); */
     box-shadow: var(--sombraNasInput);
-    background-color: var(--fundoDasInput);
+    background-color: white;
     font-weight: bolder;
 }
 
@@ -141,5 +141,9 @@ ate aqui é padrao em todos  */
     margin-top: 30px;
     color: var(--branco);
     font-family: var(--montserrat);
+}
+
+.lista__alinhamento{
+    text-align: center;
 }
 

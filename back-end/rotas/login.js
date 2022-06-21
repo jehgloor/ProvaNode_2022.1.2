@@ -30,7 +30,11 @@ module.exports = app =>{
         if(req.params.tipo == "cliente"){
             Login.buscaPorEmail(email,res);
         }
+
+
+       
         if(req.params.tipo == "prestador"){
+
             Login.buscaPorEmailPrestador(email,res);
         }
        

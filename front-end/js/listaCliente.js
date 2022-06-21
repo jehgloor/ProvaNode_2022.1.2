@@ -27,7 +27,9 @@ function criaLinha(dados){
     colCIDADE.innerHTML = dados.cidade
     colUF.innerHTML = dados.uf
     colEMAIL.innerHTML = dados.email
-    linha.appendChild(colId)
+    
+    linha.appendChild(colId);
+    
     linha.appendChild(colNOME)
     linha.appendChild(colCPF)
     linha.appendChild(colCEP)
@@ -49,6 +51,7 @@ function main(){
     usuarios.forEach(element => { 
       
         let linha = criaLinha(element);
+        
         tabela.appendChild(linha);
         
     });

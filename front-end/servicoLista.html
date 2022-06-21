@@ -6,31 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    
-   
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Elsie&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-   
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,500&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="../front-end/css/style_login.css">
+    <link rel="stylesheet" href="../front-end/css/style_lista.css">
    
-    <title>Login</title>
+    <title>Lista de Serviço</title>
     <script src="../front-end/js/listaServico.js"></script>
 
 
 </head>
-<body>
+<body >
     <header class="cabecalho container">
         <img src="../front-end/img/logoServico.jpg" alt="Logo da Apeperia" class="cabecalho__logo">
         <nav class="cabecalho__navegacao">
             <ul>
-                <li class="cabecalho__link"><a href="#" class="cabecalho__link__a">Sobre</a></li>
-                <li class="cabecalho__link"><a href="#">Planos</a></li>
-                <li class="cabecalho__link"><a href="#">Blog</a></li>
-                <li class="cabecalho__link"><a href="#">Destaques</a></li>
-                <li class="cabecalho__link"><a href="#">Institucional</a></li>
+                <li class="cabecalho__link"><a href="#">Sobre</a></li>
+                <li class="cabecalho__link"><a href="itensLista.html">Valores de Serviços</a></li>
+                <li class="cabecalho__link"><a href="login.html">Login</a></li>
+                <li class="cabecalho__link"><a href="cliente.html">Cadastro | Cliente</a></li>
+                <li class="cabecalho__link"><a href="prestadorServico.html">Cadastro | Afiliado</a></li>
                 <li class="cabecalho__link"><a href="#">Contato</a></li>
             </ul>
         </nav>
@@ -44,31 +40,29 @@
         </section>
         <!-- até aqui é padrao  -->
         <div class="row ">
-            <div class="col-md-3">
+            <div class="col-md-4">
     
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
                  <form action="">
                 <h1 class="titulo__login">Servicos selecionados</h1><br>
-                <input type="number" id="prestador"> 
-                <input type="button"    onclick="main()">
-               </form>
-                <table id="tabela">
-                    <thead>
-                        <tr>
-                            <th>Prestador</th>
-                            <th>Itens</th>
-                            <th>Valor</th>
+                <input class="input__forms--login form-control " placeholder="Digite o ID do Prestador" type="number" id="prestador"> <br>
+                <input class="botao__enviar form-control" type="button" onclick="main()"> 
+               </form><br>
+                <table class="form-control"  id="tabela">
+                    <thead  >
+                        <tr >
+                            <th >Prestador</th>
+                            <th >Itens</th>
+                            <th >Valor</th>
                         </tr>
                     </thead>
                     <tbody></tbody>
                 </table>
               
                     
-                   
-             
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 
             </div>
         </div>

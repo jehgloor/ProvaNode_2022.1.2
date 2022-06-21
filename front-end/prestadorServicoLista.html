@@ -4,23 +4,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Elsie&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../front-end/css/style_lista.css">
     <title>Prestador de Serviço</title>
 </head>
 <body>
-    <h1>Usuários prestador de serviço</h1>
-    <table id="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nome</th>
-                <th>Cpf</th>
-                <th>E-mail</th>
-                <th>Senha</th>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
+    <header class="cabecalho container">
+        <img src="../front-end/img/logoServico.jpg" alt="Logo da Apeperia" class="cabecalho__logo">
+        <nav class="cabecalho__navegacao">
+            <ul>
+                <li class="cabecalho__link"><a href="#">Sobre</a></li>
+                <li class="cabecalho__link"><a href="itensLista.html">Valores de Serviços</a></li>
+                <li class="cabecalho__link"><a href="login.html">Login</a></li>
+                <li class="cabecalho__link"><a href="cliente.html">Cadastro | Cliente</a></li>
+                <li class="cabecalho__link"><a href="prestadorServico.html">Cadastro | Afiliado</a></li>
+                <li class="cabecalho__link"><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="chamada container">
+            <h1 class="chamada__titulo">Serviço Express</h1>
+            <p class="chamada__texto">Serviços Express tem um jeito inovador de mostrar aos 
+                nossos clientes os valores de nossos serviços</p>
+            
+        </section>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <h1 class="titulo__login">Usuários prestador de serviço</h1>
+                <table id="table">
+                    <thead class="lista__alinhamento">
+                        <tr class=>
+                            <th>Id</th>
+                            <th>Nome</th>
+                            <th>Cpf</th>
+                            <th>E-mail</th>
+                            <th>Senha</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+    </main>
+    
     <script src="../front-end/js/listaPrestador.js"></script>
 </body>
 </html>

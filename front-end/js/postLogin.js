@@ -37,10 +37,19 @@ function consultaLogin(event){
         });
     
         if(cont == 0){
-            alert("Usuário não encontrado")
+            if(tipo == "cliente"){
+                alert("Usuário não encontrado, por favor faça seu cadastro")
+                window.location.href = '../front-end/cliente.html'
+            }
+            else if(tipo == "prestador"){
+                alert("Prestador não encontrado, por favor faça seu cadastro")
+                window.location.href = '../front-end/prestadorServico.html'
+            }
+            
         }else{
             if(senha == senhaBanco){
-                window.location.href = '../front-end/cliente.html'
+ 
+                window.location.href = '../front-end/itensDeServico.html'
                 alert("Usuário logado com sucesso")
             }else{
                 alert("Senha incorreta!")
