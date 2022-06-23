@@ -18,6 +18,8 @@ function fazPost(url,body){
         //ainda não foi enviada por chamada send().
         console.log(this.responseText)
     }
+        //para ir para outra página
+        window.location.href = '../front-end/login.html'
     return request.responseText
 }
 function cadastraUsuario(){

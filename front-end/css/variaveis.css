@@ -10,3 +10,8 @@
     --branco: #fff;
     --letraBotao:'Fredoka One', cursive;
 }
+
+.container{
+    padding-right: 6%;
+    padding-left: 6%;
+}

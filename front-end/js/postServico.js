@@ -8,7 +8,7 @@ function fazPOST(url, body){
     request.onload = function() {
         console.log(this.responseText)
     }
-
+    window.location.href = '../front-end/servicoLista.html'
     return request.responseText
 
 

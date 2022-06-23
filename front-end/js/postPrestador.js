@@ -7,7 +7,8 @@ function fazPost(url, body){
     request.onload = function(){
         console.log(this.responseText)
     }
-
+  //para ir para outra página
+  window.location.href = '../front-end/login.html'
     return request.responseText
 }
 

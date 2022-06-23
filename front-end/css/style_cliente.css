@@ -105,3 +105,49 @@ body{
     font-weight: bolder;
     background-color: rgb(76, 187, 76);
 }
+
+
+/* rodapé */
+.rodape {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.rodape__social {
+    display: flex;
+}
+
+.rodape__midia {
+    display: block;
+    width: 42px;
+    height: 42px;
+    margin: 2rem 1rem;
+}
+
+.rodape__navegacao {
+    color: var(--branco);
+    line-height: 3;
+    text-align: left;
+    min-width: 600px;
+}
+
+
+.rodape__link {
+    display: inline-block;
+    margin: 0 .5rem .7rem;
+}
+.rodape__link a{
+    text-decoration: none;
+    color: var(--branco);
+}
+
+.rodape__logo{
+    margin-bottom: 1rem;
+    height: 80px;
+    border-radius: 50%;
+}
