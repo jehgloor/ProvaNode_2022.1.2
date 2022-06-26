@@ -13,6 +13,7 @@ function fazPost(url,body){
 
 function itensdeservico(){
  //   event.preventDefault()
+    alert ("Teste")
     const url = 'http://localhost:5000/itensdeservico'
     let nome = document.getElementById("nome").value
     let id = parseInt (document.getElementById("id").value)
