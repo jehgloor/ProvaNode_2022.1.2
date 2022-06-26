@@ -24,10 +24,9 @@ function itensdeservico(){
     console.log(tempo)
 
     body = {
-        "nome": nome,
-        "id": id,
-        "valor": valor,
-        "tempo": tempo
+        "nome_Servico": nome,
+        "valor_Servico": valor,
+        "tempo_Servico": tempo
     }
 
     fazPost(url, body)
