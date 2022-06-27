@@ -5,7 +5,7 @@ function fazPost(url,body){
     request.send(JSON.stringify(body))
 
     request.onload = function(){
-        console.log(this.responseText)
+        alert(this.responseText)
     }
 
     return request.responseText
@@ -15,14 +15,13 @@ function itensdeservico(){
  //   event.preventDefault()
     alert ("Teste")
     const url = 'http://localhost:5000/itensdeservico'
-    let nome = document.getElementById("nome").value
-    let id = parseInt (document.getElementById("id").value)
-    let valor = document.getElementById("valor").value
-    let tempo = document.getElementById("tempo").value
-    console.log(nome)
-    console.log(id)
-    console.log(valor)
-    console.log(tempo)
+    alert(url)
+    let nome = document.getElementById("nomeServico").value
+    alert(nome)
+    let valor = document.getElementById("valorServico").value
+    alert(valor)
+    let tempo = document.getElementById("tempoServico").value
+    alert(tempo)
 
     body = {
         "nome_Servico": nome,
