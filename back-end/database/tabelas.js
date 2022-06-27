@@ -8,7 +8,7 @@ class Tabelas {
         this.criaCliente();
 
         this.criaPrestadorDeServico()
-
+        this.criaItensdeservico()//aqui
         this.criaServico()
         //this.criaLogin()
         
@@ -71,7 +71,7 @@ criaServico(){
         'total DOUBLE NOT NULL,'+
         'id_itensDeServico INT,'+
         'id_prestadorDeServico INT,'+
-        'FOREIGN KEY (id_itensDeServico) REFERENCES itensDeServico(id_itensdeservico),'+
+        'FOREIGN KEY (id_itensDeServico) REFERENCES itensDeServico(id_itensdeServico),'+
         'FOREIGN KEY (id_prestadorDeServico) REFERENCES prestadorDeServico(id_prestadordeServico))'
        
         this.conexao.query(sql, erro => {
@@ -101,6 +101,25 @@ criaPrestadorDeServico(){
         })
 
         //console.log(sql);           
+}
+
+
+criaItensdeservico(){
+    let sql = 'CREATE TABLE IF NOT EXISTS itensDeServico'+
+        '(id_itensdeServico INT AUTO_INCREMENT PRIMARY KEY,'+
+        'nome_Servico VARCHAR (200) NOT NULL,'+
+        'valor_Servico INT NOT NULL,'+
+        'tempo_Servico INT NOT NULL);'
+
+        this.conexao.query(sql, erro => {
+            if(erro){
+                console.log(erro);
+            }else{
+                console.log('Tabela ITENSDESERVICO criada com sucesso!')
+            }
+        })
+
+        //console.log(sql);
 }
 
 }
