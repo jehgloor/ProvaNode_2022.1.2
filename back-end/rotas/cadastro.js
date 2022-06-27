@@ -1,5 +1,5 @@
 const req = require("express/lib/request")
-const itensdeservico = require("../model/cadastro")
+const itensdeservico = require("../model/itensdeservico.js")
 
 module.exports = app =>{
     app.get('/itensdeservico',(req,res) =>{
