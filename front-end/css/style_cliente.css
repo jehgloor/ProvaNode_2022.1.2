@@ -136,6 +136,10 @@ body{
     min-width: 600px;
 }
 
+.rodape__social li{
+    list-style: none;
+}
+
 
 .rodape__link {
     display: inline-block;

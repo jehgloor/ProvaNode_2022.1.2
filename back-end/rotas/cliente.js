@@ -12,8 +12,8 @@ module.exports = app =>{
         cliente.buscaPorId(id,res)
     })
     app.post('/cliente',(req,res)=>{   
-        cliente.adiciona(req.body)
-        res.send('Você esta em cliente via post!')
+        cliente.adiciona(req.body,res)
+       // res.send('Você esta em cliente via post!')
     })
     app.patch('/cliente/ :id',(req,res)=>{
         let id = parseInt(req.params.id)

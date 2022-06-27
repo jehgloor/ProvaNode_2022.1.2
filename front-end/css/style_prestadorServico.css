@@ -168,6 +168,9 @@ ate aqui é padrao em todos  */
     min-width: 600px;
 }
 
+.rodape__social li{
+    list-style: none;
+}
 
 .rodape__link {
     display: inline-block;

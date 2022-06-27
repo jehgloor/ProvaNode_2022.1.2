@@ -170,20 +170,30 @@ ate aqui é padrao em todos  */
 }
 
 .rodape__navegacao {
-    color: var(--branco);
+    /* color: var(--branco); */
     line-height: 3;
     text-align: left;
     min-width: 600px;
+    font-weight: bold;
+}
+.rodape__navegacao li a {
+    color: var(--preto);
+    font-weight: bold;
+}
+.rodape__social li{
+    list-style: none;
 }
 
 
 .rodape__link {
     display: inline-block;
     margin: 0 .5rem .7rem;
+   
 }
 .rodape__link a{
     text-decoration: none;
     color: var(--branco);
+   
 }
 
 .rodape__logo{
