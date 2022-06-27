@@ -27,9 +27,10 @@ function criaLinha(dados){
 
 
 function main(){
-    let prestador = parseInt(document.getElementById('prestador').value)
-
+ 
+     let prestador = document.getElementById('prestador').value
     let dados = fazGET("http://localhost:5000/servicos/"+prestador)
+      
     let tabela = document.getElementById('tabela')
     let servicos = JSON.parse(dados)
 

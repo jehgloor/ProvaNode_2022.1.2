@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,6 +31,8 @@
                 <li class="cabecalho__link"><a href="login.html">Login</a></li>
                 <li class="cabecalho__link"><a href="cliente.html">Cadastro | Cliente</a></li>
                 <li class="cabecalho__link"><a href="prestadorServico.html">Cadastro | Afiliado</a></li>
+                <li class="cabecalho__link"> <a href="servicoLista.html">Serviços por Prestador</a></li>
+                <li class="cabecalho__link"> <a href="servico.html">Registrar Serviço</a></li>
                 <li class="cabecalho__link"><a href="#">Contato</a></li>
             </ul>
         </nav>
@@ -49,7 +51,7 @@
             </div>
             <div class="col-md-6">   
                 <form method="GET" >
-                     <h1 class="titulo__login">Servicos selecionados</h1><br>
+                     <h1 class="titulo__login">Valores dos Serviços</h1><br>
                  <table id="tabela">
               
                  <thead>
@@ -60,7 +62,7 @@
                         </tr>
                        
                     </thead>
-                     <button type="submit" onclick="main()"></button>
+                     <button type="submit" onclick="main()">Pesquisar</button>
                
              <tbody></tbody>
                 </table>

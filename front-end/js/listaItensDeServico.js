@@ -31,8 +31,8 @@ function main(){
     let tabela = document.getElementById('tabela')
     let servicos = JSON.parse(dados)
 
-    servicos.forEach(element => {
-        let linha = criaLinha(element)
+    servicos.forEach(dados => {
+        let linha = criaLinha(dados)
         tabela.appendChild(linha)
     });
 }
