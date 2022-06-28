@@ -12,20 +12,11 @@ module.exports = app => {
         Servicos.buscaPorPrestador(idCliente,res)
     })
 
-    app.get('/itensdeservico', (req, res) =>{
-        Servicos.listaitens(res)
-    })
-
 
     //POSTS
     app.post('/servicos', (req,res) => {
         console.log(req.body)
         Servicos.adiciona(req.body,res)
         // res.send("Voce esta em SERVICOS via POST")
-    })
-
-    app.post('/itensdeservico', (req, res) => {
-        console.log(req.body)
-        Servicos.adicionaItem(req.body,res)
     })
 }
