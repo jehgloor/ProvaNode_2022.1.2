@@ -49,7 +49,7 @@ function consultaLogin(event){
         }else{
             if(senha == senhaBanco){
  
-                window.location.href = '../front-end/itensDeServico.html'
+                window.location.href = '../front-end/listaitensdeservico.html'
                 alert("Usuário logado com sucesso")
             }else{
                 alert("Senha incorreta!")
