@@ -8,8 +8,8 @@ module.exports = app => {
     })
 
     app.get('/servicos/:id_prestadorDeServico',(req,res) =>{
-        let idCliente = parseInt(req.params.id_prestadorDeServico)
-        Servicos.buscaPorPrestador(idCliente,res)
+        let idPrestador = parseInt(req.params.id_prestadorDeServico)
+        Servicos.buscaPorPrestador(idPrestador,res)
     })
 
 
