@@ -18,18 +18,7 @@ class Servicos{
 
 
     }
-    adicionaItem(itens, res){
-        let sql = 'INSERT INTO itensdeservico SET ?'
-
-        conexao.query(sql, itens, (erro, resultado) =>{
-            if(erro){
-                res.status(400).json(erro)
-            }
-            else{
-                res.status(200).json(resultado)
-            }
-        })
-    }
+  
 
     lista(res){
         let sql = 'SELECT * FROM servico'
@@ -43,19 +32,7 @@ class Servicos{
     })
     }
 
-    listaitens(res){
-        let sql = 'SELECT * FROM itensdeservico'
-
-        conexao.query(sql, (erro, resultado) => {
-            if(erro){
-                res.status(400).json(erro)
-            }
-            else{
-                res.status(200).json(resultado)
-            }
-
-        })
-    }
+    
 
     buscaPorPrestador(id_prestador, res){
         let sql = 'SELECT * FROM servico WHERE id_prestadorDeServico=?'
